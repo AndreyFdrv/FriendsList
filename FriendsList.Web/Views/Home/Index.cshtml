@@ -1,0 +1,9 @@
+﻿@using FriendsList.Web.Models;
+@model UserModel
+
+<b>Авторизованный пользователь:</b> @Model.FirstName&nbsp;@Model.LastName<br />
+<b>Друзья:</b><br/>
+@foreach (var friend in Model.Friends)
+{
+    <div>@friend.FirstName&nbsp;@friend.LastName</div>
+}
